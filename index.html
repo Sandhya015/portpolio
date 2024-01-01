@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .about-section,
+      .resume-section,
+      .contact-section,
+      .projects-section {
+        background-color: #f4f4f4; /* Use the desired background color */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Sandhya Manjunath Naik</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="https://www.linkedin.com/in/sandhya-naik-b4189a279?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BXOUEj4UoTrqOMS8PV27OQw%3D%3D">Linkedin</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Certification</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Sandhya<br />a</span> Web Developer
+          </h1>
+          <p class="description">
+            Welcome to my web developer portfolio! I'm Sandhya, a skilled and
+            creative web developer with a passion for creating beautiful,
+            responsive, and user-friendly websites. I've worked on a variety of
+            web projects, ranging from personal blogs to e-commerce platforms.
+          </p>
+          <div class="action__btns">
+            <button class="hire__me">Hire Me</button>
+            <button class="portfolio">Portfolio</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="assets/s.jpeg" alt="profile" />
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="section__container">
+        <div class="content">
+          <h2>About Me</h2>
+          <p>
+            I am a passionate web developer dedicated to creating engaging and
+            user-friendly websites. With a strong background in front-end and
+            back-end technologies, I bring a unique blend of creativity and
+            technical expertise to my projects.
+          </p>
+          <!-- Additional information below the description -->
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
+            augue auctor, ullamcorper dui at, dapibus sem. Nulla facilisi.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+      <div class="section__container">
+        <div class="content">
+          <h2>Resume</h2>
+          <p>
+            My resume showcases my skills and experience in web development. I
+            have a strong foundation in HTML, CSS, JavaScript, and various
+            frameworks.
+          </p>
+          <!-- Additional information below the description -->
+          <p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+            <img src="assets/s.jpeg" alt="resume">
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="section__container">
+        <div class="content">
+          <h2>Contact Me</h2>
+          <p>
+            Feel free to reach out to me for any inquiries or collaboration
+            opportunities. You can contact me via email or through my LinkedIn
+            profile.
+          </p>
+          <!-- Additional information below the description -->
+          <p>Email: sandhya@example.com</p>
+          <p>LinkedIn: linkedin.com/in/sandhya</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="section__container">
+        <div class="content">
+          <h2>Projects</h2>
+          <p>
+            Showcase your projects here with details and links.
+          </p>
+          <!-- Additional information below the description -->
+          <p>
+            Project 1: [Project Name 1] - [Project Description 1] - [Link]
+          </p>
+          <p>
+            Project 2: [Project Name 2] - [Project Description 2] - [Link]
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const aboutMenuItem = document.querySelector('nav ul li:nth-child(2) a');
+        const resumeMenuItem = document.querySelector('nav ul li:nth-child(3) a');
+        const contactMenuItem = document.querySelector('nav ul li:nth-child(5) a');
+        const projectsMenuItem = document.querySelector('nav ul li:nth-child(6) a');
+
+        aboutMenuItem.addEventListener('click', function (event) {
+          event.preventDefault();
+          scrollToSection('.about-section');
+        });
+
+        resumeMenuItem.addEventListener('click', function (event) {
+          event.preventDefault();
+          scrollToSection('.resume-section');
+        });
+
+        contactMenuItem.addEventListener('click', function (event) {
+          event.preventDefault();
+          scrollToSection('.contact-section');
+        });
+
+        projectsMenuItem.addEventListener('click', function (event) {
+          event.preventDefault();
+          scrollToSection('.projects-section');
+        });
+
+        function scrollToSection(sectionSelector) {
+          const targetSection = document.querySelector(sectionSelector);
+          const yOffset = -10;
+
+          window.scrollTo({
+            top: targetSection.offsetTop + yOffset,
+            behavior: 'smooth',
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
